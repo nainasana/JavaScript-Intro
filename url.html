@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Loading Page</title>
+
+</head>
+
+<style>
+    #GetURL {
+        text-align:center;
+}
+</style>
+<body>
+    <div id="GetURL" style="color:white;">
+        <p>Get URL of the Website below : <br>
+            <input type="button" value="Click Here" onclick="GetURL()">
+        </p>
+        <p id="url"></p>
+    </div>
+
+    <script>
+         function GetURL() {
+                var a = document.URL;
+                document.getElementById("url").innerHTML = a;
+            }
+
+    </script>
+</body>

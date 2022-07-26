@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>AreaOfCircle</title>
+
+</head>
+
+<style>
+    body{
+        background-color:#383d3f;
+        }
+
+    #container{
+        background-color: rgb(187, 173, 165);
+        border: 5px solid #050505; 
+        height: 275px;
+        width: 750px;
+        margin: auto;
+        text-align:center;
+    }
+
+    h1{
+        color:rgb(3, 3, 3);
+       text-decoration: underline;
+
+    }
+
+    h2{
+        color:rgb(20, 24, 88);
+       
+    }
+
+    #GetURL {
+            text-align:center;
+}
+
+
+</style>
+<body>
+    <div id="container">
+
+        <h1>Area of a Circle</h1>
+        <h2><b>Enter the radius for your circle :</b></h2>
+        <input type="text" id="radius" value="">
+        <input type="button" value="Calculate" onclick=CalArea()>
+        <p id="area"></p>
+    </div>
+
+    <div id="GetURL" style="color:white;">
+        <p>Get URL of the Website below : <br>
+            <input type="button" value="Click Here" onclick="GetURL()">
+        </p>
+        <p id="url"></p>
+    </div>
+
+    <script>
+            
+    function CalArea() {
+            var radius = document.getElementById("radius").value;
+            document.getElementById("area").innerHTML = ("The area of the circle is :  " + (radius * radius * Math.PI));
+        }
+
+    function GetURL() {
+            var a = document.URL;
+            document.getElementById("url").innerHTML = a;
+        }
+    
+
+    </script>
+</body>
