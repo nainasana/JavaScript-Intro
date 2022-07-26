@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>JavaScriptIntro</title>
+
+</head>
+
+<style>
+
+body {
+background-color: #333232;
+}
+
+#container {
+
+background-color: #0E2431;
+border: 5px solid #F5E4C3;
+height: 275px;
+width: 750px;
+margin: auto;
+text-align:center;
+}
+
+#GetURL {
+
+text-align:center;
+}
+
+p{
+color: white;
+font-size:24px;
+}
+
+h1{
+color:white;
+text-decoration:underline;
+text-decoration-color: aliceblue;
+
+}
+
+</style>
+
+<body>
+    <div id="container">
+        <h1>Number Guessing</h1>
+        <p>Guess a number between 1 - 10 :</p>
+        <input id="inputFiled" type=text />
+        <input type="button" value="Submit" onclick="check()">
+        <p id="random"></p>
+    </div>
+
+    <div id="GetURL">
+        <p>Get URL of the Website below : <br>
+            <input type="button" value="Click Here" onclick="GetURL()">
+        </p>
+        <p id="url"></p>
+    </div>
+
+
+    <script>
+        function check() {
+                var x = Math.floor((Math.random() * 10));
+                var i = document.getElementById('inputFiled').value;
+                if (parseInt(i) === parseInt(x)) {
+                    document.getElementById("random").innerHTML = "Matched";
+                } else {
+                    document.getElementById("random").innerHTML = "Not Matched";
+                }
+            }
+
+            function GetURL() {
+                var a = document.URL;
+                document.getElementById("url").innerHTML = a;
+            }
+        
+
+    </script>
+
+</body>
+
+</html>
